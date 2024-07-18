@@ -1,0 +1,389 @@
+
+html{
+    background-color: #3E6C7D;
+    font-family: sans-serif;
+  }
+  
+  body{
+	background-color:#3C647B !important;
+  }
+
+
+  .textopago{
+    color: white;
+    text-align: center;
+    font-size: 20px;
+  }
+
+  #textbienvenida{
+    color: #ffffff;
+    padding-top: 1vh;
+    padding-left: 2vw;
+}
+
+
+  .carritoimg{
+    margin-right: 1vh;
+    margin-top: 1vh;
+    height: auto;
+    width: 45px;
+    border-radius: 15%;
+}
+
+.carritonav{
+    width: 7vw;
+}
+
+  .hamburger{
+	position:fixed;
+  background-color:transparent;
+	left:0;
+	top:0;
+	height:30px;
+	width:30px;
+	padding:20px 20px;
+	-webkit-transform:translate3d(0, 0, 0);
+	transform:translate3d(0, 0, 0);
+	-webkit-transition:-webkit-transform 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+	transition:transform 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+	z-index:1002;
+	cursor:pointer;
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none
+}
+.hamburger.is-active{
+  background-color:none;
+}
+._layer{
+	background:#2d82c7;
+	border: #E7BB63 solid 1px;
+	margin-bottom:4px;
+	border-radius:2px;
+	width:28px;
+	height:4px;
+	opacity:1;
+	-webkit-transform:translate3d(0, 0, 0);
+	transform:translate3d(0, 0, 0);
+	-webkit-transition:all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+	transition:all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+}
+.hamburger:hover .-top{
+	-webkit-transform:translateY(-100%);
+	-ms-transform:translateY(-100%);
+	transform:translateY(-100%);
+}
+.hamburger:hover .-bottom{
+	-webkit-transform:translateY(50%);
+	-ms-transform:translateY(100%);
+	transform:translateY(100%);
+	}
+.hamburger.is-active .-top{
+	-webkit-transform:translateY(200%) rotate(45deg) !important;
+	-ms-transform:translateY(200%) rotate(45deg) !important;
+	transform:translateY(200%) rotate(45deg) !important;
+}
+.hamburger.is-active .-mid{
+	opacity:0;
+}
+.hamburger.is-active .-bottom{
+	-webkit-transform:translateY(-200%) rotate(135deg) !important;
+	-ms-transform:translateY(-200%) rotate(135deg) !important;
+	transform:translateY(-200%) rotate(135deg) !important;
+}
+
+.menuppal.is_active{
+  transform: translate3d(0px, 0px, 0px);
+}
+.menuppal{
+    background-color: #3C647B;
+	border-right: #05243D solid 0.4vw;
+	border-bottom: #05243D solid 0.4vw;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    transform: translate3d(-100%, 0px, 0px);
+    transition: transform 0.35s cubic-bezier(0.05, 1.04, 0.72, 0.98) 0s;
+    width: 30%;
+    z-index: 1001;
+}
+.menuppal ul{
+  margin:0;padding:0;
+}
+
+.menuppal ul li { 
+  list-style: none;
+	text-align:center;
+	font-family: Verdadna, Arial, Helvetica;
+	color: nav-color-text;
+	font-size: 1.5rem;
+	line-height: 3em;
+	height: 3em;
+  	color: #36BFB1;
+	text-transform:none;
+	font-weight:bold;
+}
+
+.menuppal ul li a{
+  text-decoration:none;
+  color:#ffffff;
+}
+.menuppal ul li a:hover{
+  text-decoration:none;
+  color:#05243D;
+}
+
+
+.navbuttons{
+	display: flex;
+  	padding-left: 80vw;
+}
+
+.navpages{
+  padding-left: 2vw;
+}
+
+.btnnav{
+	width: 19vw;
+	justify-content: space-around;
+	padding-top: 1.5vh;
+}
+
+.labellogin{
+	padding-right: 7vw;
+}
+
+
+#btnGrabarCta{
+	background-color: #749EAC;
+}
+
+#btnGrabarCta:hover{
+	background-color: #3C647B;
+}
+
+#btnIngresarCta{
+	background-color: #749EAC;
+}
+
+#btnIngresarCta:hover{
+	background-color: #3C647B;
+}
+
+#botonregistrarse{
+	background-color: #749EAC;
+	color: white;
+	border-color: #E7BB63; 
+	height: 6vh;
+}
+
+#botonregistrarse:hover{
+	background-color: #3C647B;
+	color: #0D0D0D;
+	border-color: white;
+}
+
+#botonlogin{
+	background-color: #749EAC;
+	color: white;
+	border-color: #E7BB63;
+	height: 6vh;
+}
+
+#botonlogin:hover{
+	background-color: #3C647B;
+	color: #0D0D0D;
+	border-color: white;
+}
+
+#navbar{
+	background-color: #05243D;
+	height: 9vh;
+	justify-content: center;
+	display: flex;
+}
+
+.modal-header{
+    background-color: #05243D;
+    color: white;
+    border: #0D0D0D 2px solid;
+}
+
+.modal-body{
+    background-color: #3C647B;
+    border: #0D0D0D 2px solid;
+}
+
+.modal-footer{
+    background-color: #05243D;
+    color: white;
+    border: #0D0D0D 2px solid;
+}
+
+
+.cajaspring{
+	background-color: #749EAC;
+	color: white;
+	border: 2px solid #05243D;
+	border-radius: 5%;
+	margin: 0;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	width: 50vw;
+	transform: translate(-50%);
+	margin: 5vh 0 5vh 0;
+}
+
+.titulospring{
+	font-size: 50px;
+	display: flex;
+	justify-content: center;
+	padding-bottom: 5vh;
+}
+
+.textspring{
+	font-size: 20px;
+	display: flex;
+	justify-content: center;
+	padding-bottom: 5%;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+.imagenesspring{
+	border-radius: 20%;
+	border: 2px solid #05243D;
+	height: auto;
+	width: 40vw;
+}
+
+.divisiones{
+	display: flex;
+	justify-content: center;
+	padding-bottom: 5%;
+}
+
+.zoom {
+    transition: transform .2s; 
+}
+
+.zoom:hover {
+    transform: scale(1.1); 
+}
+
+
+/*! Footer*/
+.pie{
+    background: #05243D;
+}
+.imgfooter{
+    width: 40px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+.spanfooter{
+    font-size: 23px;
+}
+.fb{
+    background: rgb(0, 81, 255);
+    padding: 8px;
+    border-radius: 50px;
+    color: white;
+}
+.tw{
+    background: rgb(0, 140, 255);
+    padding: 8px;
+    border-radius: 50px;
+    color: white;
+}
+.in{
+    background: rgb(255, 0, 179);
+    padding: 8px;
+    border-radius: 50px;
+    color: white;
+}
+.li{
+    background: rgb(0, 102, 255);
+    padding: 8px;
+    border-radius: 50px;
+    color: white;
+}
+.yt{
+    background: rgb(255, 0, 0);
+    padding: 8px;
+    border-radius: 50px;
+    color: white;
+}
+.inicio{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+}
+.logotipo{
+    font-size: 18px;
+    color: white;
+}
+.section{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 40px;
+    padding-bottom: 5vh;
+}
+.section .divsection{
+    display: flex;
+    flex-direction: column;
+}
+.divsection .h2footer{
+    color: white;
+    padding: 10px 0;
+}
+.afooter{
+    color: rgba(255, 255, 255, 0.527);
+    text-decoration: none;
+    padding: 5px;
+}
+.formfooter{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.inputfooter{
+    background: none;
+    color: white;
+    border: solid 2px white;
+    padding: 10px 20px;
+    text-align: center;
+}
+.buttonfooter{
+    padding: 10px 20px;
+    background: #749EAC;
+    color: white;
+    font-size: 18px;
+}
+
+.buttonfooter:hover{
+    padding: 10px 20px;
+    background: #3C647B;
+    color: black;
+    font-size: 18px;
+}
+
+.fechalabel{
+    padding-top: 3vh;
+    color: white;
+}
+
+.cantidadlabel{
+    color: white;
+}
+
+
+

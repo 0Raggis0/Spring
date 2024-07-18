@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../recursos/css/empresarial.css"> 
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="../Librery/bootstrap-dist/css/bootstrap.min.css">
+    <script src="../Librery/bootstrap-dist/js/bootstrap.min.js"></script>
+
+    <!--Tabulator-->
+    <link href="../Librery/Tabulator/dist/css/tabulator.min.css" rel="stylesheet">
+    <script type="text/javascript" src="../Librery/Tabulator/dist/js/tabulator.min.js"></script>
+
+    <!--JQuery-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<title>Spring</title>
+
+</head>
+
+<body>
+  <div id="background">
+    <nav>
+      <div class="navbuttons" id="navbar">
+        <div class="hamburgerubication">
+          <div class="hamburger">
+            <div class="_layer -top"></div>
+            <div class="_layer -mid"></div>
+            <div class="_layer -bottom"></div>
+          </div>
+          <nav class="menuppal">
+              <ul>
+                <li><a href="/www/View/Index.html">Home</a></li>
+                <li><a href="/www/View/QuienesSomos.html">¿Quienes somos?</a></li>
+                <li><a href="/www/View/Catalogo.html">Catalogo de eventos</a></li>
+                <li><a href="/www/View/Contactanos.html">Contactanos</a></li>
+              </ul>
+            </nav> 
+          </div> 
+
+
+          <a href="javascript:V_imagen();" id="carritocompras" class="carritonav"><label id="cant"><strong>0</strong></label><img class="carritoimg"  src="../recursos/images/IndexImages/icons8-carrito-de-compras-80.png" alt=""></a>
+      <form class="form-inline my-2 my-lg-0 btnnav">
+        <button class="btn btn-outline-success my-2 my-sm-0 botones" data-bs-toggle="modal"
+        data-bs-target="#RegisterModal" data-bs-whatever="@fat" type="button" id="botonregistrarse">Registrarse</button>
+
+        <button class="btn btn-outline-success my-2 my-sm-0 " data-bs-toggle="modal"
+        data-bs-target="#LoginModal" data-bs-whatever="@fat" type="button" id="botonlogin">Login</button>
+
+        <a href="/www/View/Index.html" style="text-decoration: none;" ><h5 id="textbienvenida">Bienvenid@</h5></a>
+      </form>
+
+      <div class="modal fade" id="RegisterModal" tabindex="-1" aria-labelledby="RegisterModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="RegisterModalLabel">¡Crea tu cuenta aqui!</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <input type="text" class="form-control" id="textNombreReg" placeholder="Nombres">
+                </div>
+                <div class="mb-3">
+                  <input type="text" class="form-control" id="textApellidosReg" placeholder="Apellidos">
+                </div>
+                <div class="mb-3">
+                  <input type="date" class="form-control" id="textFechaReg" placeholder="Fecha de nacimiento">
+                </div>
+                <div class="mb-3">
+                  <input type="text" class="form-control" id="textCorreoReg" placeholder="Correo">
+                </div>
+                <div class="mb-3">
+                  <input type="password" class="form-control" id="textContraseñaReg" placeholder="Contraseña">
+                </div>
+                <div class="mb-3">
+                  <input type="password" class="form-control" id="textConfirmarReg" placeholder="Confirmar Contraseña">
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="limpiar()">Cerrar</button>
+              <button type="button" class="btn btn-primary" id="btnGrabarCta">Registrarse</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+<div class="modal fade" id="LoginModal" tabindex="-1" aria-labelledby="LoginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="LoginModalLabel">¡Entra a tu cuenta!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <input type="text" class="form-control" id="textnombre" placeholder="TuCuenta@gmail.com">
+          </div>
+          <div class="mb-3">
+            <input type="password" class="form-control" id="textContra" placeholder="Contraseña">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <label class="labellogin" >Si no tienes cuenta creala <a href="" data-bs-toggle="modal"
+          data-bs-target="#RegisterModal" data-bs-whatever="@fat">aqui</a></label>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="limpiar()">Cerrar</button>
+        <button type="button" class="btn btn-primary" id="btnIngresarCta">Ingresar</button>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>  
+    </div>
+
+<!--!Catalogo-->
+
+
+    <section class="contenido">
+        <div class="mostrador" id="mostrador">
+            <div class="fila">
+                <div class="item" ">
+                    <div class="contenedor-foto">
+                        <img src="../recursos/images/empresarial/silla.webp" class="imagen" alt="">
+                    </div>
+                    <p class="nombre">Sillas</p>
+                    <p class="descripcion" hidden >Evita gastos excesivos.</p>
+                    <span class="precio">$ 1.000 </span>
+                </div>
+                <div class="item" ">
+                    <div class="contenedor-foto">
+                        <img src="../recursos/images/empresarial/mesa1.webp" class="imagen" alt="">
+                    </div>
+                    <p class="nombre" id>Mesas</p>
+                    <p class="descripcion" hidden >Nunca dejes de lado algo sencillo.</p>
+                    <span class="precio">$ 4.000</span>
+                </div>
+                <div class="item" ">
+                    <div class="contenedor-foto">
+                        <img src="../recursos/images/empresarial/bebidas.jpg" class="imagen" alt="">
+                    </div>
+                    <p class="nombre">Bebidas</p>
+                    <p class="descripcion" hidden >Nuestro asesor se pondrá en contacto directamente para elegir la bebida deseada para su evento.</p>
+                    <span class="precio">($2.000 - $7.000)</span>
+                </div>
+                <div class="item" ">
+                    <div class="contenedor-foto">
+                        <img src="../recursos/images/empresarial/extras.jpg" class="imagen" alt="">
+                    </div>
+                    <p class="nombre">Extras</p>
+                    <p class="descripcion" hidden >Nuestro asesor se pondrá en contacto directamente para elegir los extras deseados para su evento.</p>
+                    <span class="precio">($200.000 - $350.000)</span>
+                </div>
+            </div>
+            <div class="fila">
+                <div class="item" ">
+                    <div class="contenedor-foto">
+                        <img src="../recursos/images/empresarial/refrigerios.jpg" class="imagen" alt="">
+                    </div>
+                    <p class="nombre">Refrigerios</p>
+                    <p class="descripcion" hidden >Nuestro asesor se pondrá en contacto directamente para elegir el alimento deseado para su evento.</p>
+                    <span class="precio">($5.000 - $20.000)</span>
+                </div>
+                <div class="item" ">
+                    <div class="contenedor-foto">
+                        <img src="../recursos/images/empresarial/platoprincipal.jpg" class="imagen" alt="">
+                    </div>
+                    <p class="nombre">Plato principal</p>
+                    <p class="descripcion" hidden >Nuestro asesor se pondrá en contacto directamente para elegir el alimento deseado para su evento.</p>
+                    <span class="precio">($15.000 - $30.000)</span>
+                </div>
+                <div class="item" ">
+                    <div class="contenedor-foto">
+                        <img src="../recursos/images/cumpleaños/fotografo.webp" class="imagen" alt="">
+                    </div>
+                    <p class="nombre">Servicio de fotografías</p>
+                    <p class="descripcion" hidden >El mejor de los recuerdos.</p>
+                    <span class="precio">$8.000</span>
+                </div>
+                <div class="item" ">
+                    <div class="contenedor-foto">
+                        <img src="../recursos/images/cumpleaños/maraichi.webp" class="imagen" alt="">
+                    </div>
+                    <p class="nombre">Música</p>
+                    <p class="descripcion" hidden >Puede elegir entre 1 a 3 equipos musicales, pueden ser mariachis, DJ y un equipo reproductor de música</p>
+                    <span class="precio">($150.000 - $250.000)</span>
+                </div>
+            </div> 
+        </div>
+<!-- CONTENEDOR DEL ITEM SELECCIONADO -->
+<div class="seleccion" id="seleccion">
+  <div class="cerrar" onclick="cerrar()">
+      &#x2715
+  </div>
+  <div class="info">
+      <img src="" alt="" id="img">
+      <h2 id="modelo"></h2>
+      <p id="descripcion"></p>
+      <span class="precio" id="precio"></span>
+
+      <div class="fila">
+          <div class="size">
+              <label class="cantidadlabel">CANTIDAD</label>
+                <input type="number" class="cantidad" id="cantidaditems" value="1">
+                <label class="fechalabel">FECHA DESEADA</label>
+                <input type="date" class="cantidad" id="fechadeseada">
+          </div>
+          <div class="botonagregar">
+          <button id="agregar" onclick="addshowp()">AGREGAR AL CARRITO</button>
+        </div>
+      </div>
+  </div>
+</div>
+
+        <div class="modal fade" id="modalcarrito" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Carrito:</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div id="tabla"></div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="cancelar()">cancelar</button>
+                    <button type="button" class="btn btn-primary" id="pago">Realizar pago.</button>
+                  </div>
+                      <form>
+
+
+                        <!-- MODAL DE COMPRA GENERADA -->
+<div class="modal fade" id="compragenerada" tabindex="-1" aria-labelledby="LoginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="LoginModalLabel">¡Orden de Compra confirmada!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      
+        <div class="mb-3">
+          <p class="textopago">Tu compra ha sido registrada con el número 1053</p>
+          <p class="textopago">Te contactaremos en breve.</p>
+        </div>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="aceptar">Aceptar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <script src="../Script/mostrador.js"></script>
+    <script src="../Script/carrito.js"></script>
+
+
+    
+</html>
+<script type="text/javascript" src="../Script/Index.js"></script>
+<script src="../Script/Login.js"></script>
+<script src="../Script/register.js"></script>

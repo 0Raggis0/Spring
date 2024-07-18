@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../recursos/css/contactanos.css"> 
+
+    <!--Extras-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/646ac4fad6.js" crossorigin="anonymous"></script>
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="../Librery/bootstrap-dist/css/bootstrap.min.css">
+    <script src="../Librery/bootstrap-dist/js/bootstrap.min.js"></script>
+
+    <!--Tabulator-->
+    <link href="../Librery/Tabulator/dist/css/tabulator.min.css" rel="stylesheet">
+    <script type="text/javascript" src="../Librery/Tabulator/dist/js/tabulator.min.js"></script>
+
+    <!--JQuery-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<title>Spring</title>
+
+</head>
+
+<body>
+  <div>
+    <nav>
+
+      <div class="navbuttons" id="navbar">
+        <div class="hamburgerubication">
+          <div class="hamburger">
+            <div class="_layer -top"></div>
+            <div class="_layer -mid"></div>
+            <div class="_layer -bottom"></div>
+          </div>
+          <nav class="menuppal">
+              <ul>
+                <li><a href="/www/View/Index.html">Home</a></li>
+                <li><a href="/www/View/QuienesSomos.html">¿Quienes somos?</a></li>
+                <li><a href="/www/View/Catalogo.html">Catalogo de eventos</a></li>
+                <li><a href="/www/View/Contactanos.html">Contactanos</a></li>
+              </ul>
+            </nav> 
+          </div> 
+
+
+          
+
+      <a href="javascript:V_imagen();" id="carritocompras" class="carritonav"><label id="cant"><strong>0</strong></label><img class="carritoimg"  src="../recursos/images/IndexImages/icons8-carrito-de-compras-80.png" alt=""></a>
+      <form class="form-inline my-2 my-lg-0 btnnav">
+        <button class="btn  my-2 my-sm-0 botones" data-bs-toggle="modal"
+        data-bs-target="#RegisterModal" data-bs-whatever="@fat" type="button" id="botonregistrarse">Registrarse</button>
+
+        <button class="btn  my-2 my-sm-0 " data-bs-toggle="modal"
+        data-bs-target="#LoginModal" data-bs-whatever="@fat" type="button" id="botonlogin">Login</button>
+
+        <a href="/www/View/Index.html" style="text-decoration: none;" ><h5 id="textbienvenida">Bienvenid@</h5></a>
+      </form>
+
+      <div class="modal fade" id="RegisterModal" tabindex="-1" aria-labelledby="RegisterModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="RegisterModalLabel">¡Crea tu cuenta aqui!</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <input type="text" class="form-control" id="textNombreReg" placeholder="Nombres">
+                </div>
+                <div class="mb-3">
+                  <input type="text" class="form-control" id="textApellidosReg" placeholder="Apellidos">
+                </div>
+                <div class="mb-3">
+                  <input type="date" class="form-control" id="textFechaReg" placeholder="Fecha de nacimiento">
+                </div>
+                <div class="mb-3">
+                  <input type="text" class="form-control" id="textCorreoReg" placeholder="Correo">
+                </div>
+                <div class="mb-3">
+                  <input type="password" class="form-control" id="textContraseñaReg" placeholder="Contraseña">
+                </div>
+                <div class="mb-3">
+                  <input type="password" class="form-control" id="textConfirmarReg" placeholder="Confirmar Contraseña">
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="limpiar()">Cerrar</button>
+              <button type="button" class="btn btn-primary" id="btnGrabarCta">Registrarse</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+<div class="modal fade" id="LoginModal" tabindex="-1" aria-labelledby="LoginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="LoginModalLabel">¡Entra a tu cuenta!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <input type="text" class="form-control" id="textnombre" placeholder="TuCuenta@gmail.com">
+          </div>
+          <div class="mb-3">
+            <input type="password" class="form-control" id="textContra" placeholder="Contraseña">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <label class="labellogin" >Si no tienes cuenta creala <a href="" data-bs-toggle="modal"
+          data-bs-target="#RegisterModal" data-bs-whatever="@fat">aqui</a></label>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="limpiar()">Cerrar</button>
+        <button type="button" class="btn btn-primary" id="btnIngresarCta">Ingresar</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+
+<section>
+  <div class="cajaspring">
+    <label class="titulospring"><b>¿Quieres contactarnos?</b></label>
+    <div class="divisiones">
+    <a class="fab fa-whatsapp" href="https://wa.me/3175693292/?text=Deje%20su%20mensaje" target="_blank"></a>
+    </div>
+
+    <label class="textspring"> Por medio de esta herramienta podras contactar con nosotros directamente, puedes rellenar los espacios correspondientes y dejarnos un mensaje con una solicitud o duda.</label>
+    <div class="divisiones" id="division1">
+      <input type="text" placeholder="Nombre completo" class="textspring" id="nombrecontacto" ></input>
+    </div>
+    <div class="divisiones" id="division2">
+      <input type="email" placeholder="Correo electronico" class="textspring" id="correocontacto" ></input>
+    </div>
+    <div class="divisiones" id="division3">
+      <input type="" placeholder="¡Aqui puedes escribir todo lo que quieras comentarnos!" class="textspring" id="textocontacto" ></input>
+    </div>
+    <div class="divisiones" id="division4">
+      <div id="limpiar">
+        <button class="btn my-2 my-sm-0" type="button" id="botonlimpiar">Limpiar</button>
+      </div>
+      <div id="enviar">
+        <button class="btn  my-2 my-sm-0 " type="button" id="botonenviar">Enviar</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+ <!--!FOOTER-->   
+ <footer class="pie">
+  <div class="inicio">
+      <div class="logo">
+          <p class="logotipo">SPRING</p>
+      </div>
+      <div class="redes">
+          <span class="fb spanfooter"><i class="fa-brands fa-facebook"></i></span>
+          <span class="tw spanfooter"><i class="fa-brands fa-twitter"></i></span>
+          <span class="in spanfooter"><i class="fa-brands fa-instagram"></i></span>
+          <span class="li spanfooter"><i class="fa-brands fa-linkedin"></i></span>
+          <span class="yt spanfooter"><i class="fa-brands fa-youtube"></i></span>
+          
+      </div>
+  </div>
+
+  <div class="section">
+      <div class="divsection">
+          <h2 class="h2footer">SPRING</h2>
+          <a href="../View/Index.html" class="afooter">Home</a>
+          <a href="../View/Contactanos.html" class="afooter">Contáctanos</a>
+          <a href="../View/QuienesSomos.html" class="afooter">Sobre nosotros</a>
+          <a href="../View/construccion.html" class="afooter">Trabaja con nosotros</a>
+      </div>
+      <div class="divsection">
+          <h2 class="h2footer">Servicios</h2>
+          <a href="../View/Cumpleanos.html" class="afooter">Cumpleaños</a>
+          <a href="../View/Bodas.html" class="afooter">Bodas</a>
+          <a href="../View/Empresarial.html" class="afooter">Eventos empresariales</a>
+          <a href="../View/construccion.html" class="afooter">Otros</a>
+      </div>
+      <div class="divsection">
+          <h2 class="h2footer">Cuenta</h2>
+          <a href="../View/construccion.html" class="afooter">Perfil</a>
+          <a href="../View/construccion.html" class="afooter">Mi cuenta</a>
+          <a href="../View/construccion.html" class="afooter">Preferencias</a>
+          <a href="../View/construccion.html" class="afooter">Compras</a>
+      </div>
+      <div class="divsection">
+          <h2 class="h2footer">Herramientas</h2>
+          <a href="../View/construccion.html" class="afooter">Html</a>
+          <a href="../View/construccion.html" class="afooter">JavaScript</a>
+          <a href="../View/construccion.html" class="afooter">Css</a>
+          <a href="../View/construccion.html" class="afooter">PG</a>
+      </div>
+      <div class="divsection">
+          <h2 class="h2footer">Suscribete</h2>
+          <form action="" class="formfooter">
+              <input class="inputfooter" type="text" placeholder="¡Tu correo aquí!">
+              <button class="buttonfooter" type="submit">Suscribe</button>
+          </form>
+      </div>
+  </div>
+</footer>
+
+<div class="modal fade" id="modalcarrito" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Carrito:</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div id="tabla"></div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="cancelar()">cancelar</button>
+            <button type="button" class="btn btn-primary" id="pago">Realizar pago.</button>
+          </div>
+              <form>
+
+<!-- MODAL DE COMPRA GENERADA -->
+<div class="modal fade" id="compragenerada" tabindex="-1" aria-labelledby="LoginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="LoginModalLabel">¡Orden de Compra confirmada!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      
+        <div class="mb-3">
+          <p class="textopago">Tu compra ha sido registrada con el número 1053</p>
+          <p class="textopago">Te contactaremos en breve.</p>
+        </div>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="aceptar">Aceptar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+
+</html>
+<script src="../Script/carrito.js"></script>
+<script type="text/javascript" src="../Script/Index.js"></script>
+<script src="../Script/Login.js"></script>
+<script src="../Script/register.js"></script>
